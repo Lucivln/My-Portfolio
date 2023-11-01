@@ -1,0 +1,193 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Define CSS variables for both light and dark themes */
+:root {
+    --background-color: #333; /* Dark mode background color */
+    --text-color: #000000; /* Dark mode text color */
+    --accent-color: #ff5733; /* Dark mode accent color */
+}
+
+/* Styles for the light theme */
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.header {
+    background-color: var(--accent-color);
+    color: #000000;
+    text-align: center;
+    padding: 20px 0;
+}
+
+nav ul {
+    background-color: var(--accent-color);
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+/* Styles for the dark theme */
+body.dark-mode {
+    --background-color: #333; /* Dark mode background color */
+    --text-color: #000000; /* Dark mode text color */
+    --accent-color: #ff5733; /* Dark mode accent color */
+}
+
+/* Apply dark mode styles */
+body.dark-mode .header {
+    background-color: var(--accent-color);
+    color: var(--text-color);
+}
+
+/* Add a hover effect to project cards */
+.project {
+    background-color: #ffcd42; /* Vibrant yellow */
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin: 20px;
+    padding: 20px;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+}
+
+.project:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    background-color: #f7c72e; /* Slightly different color on hover */
+}
+
+/* Add fade-in animation to project cards */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.project {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Add styles for the profile card */
+.profile-card {
+    display: flex;
+    background-color: #fff; /* Card background color */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    max-width: 600px;
+}
+
+.profile-card-content {
+    flex: 1;
+    text-align: center;
+}
+
+.profile-picture {
+    width: 250px;
+    height: auto;
+    border-radius: 100%;
+    object-fit:cover;
+    margin:auto;
+    display: block;
+}
+
+h2 {
+    font-size: 24px;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #333; /* Name color */
+}
+
+.profile-bio {
+    margin-top: 10px;
+    color: #666; /* Bio text color */
+}
+
+/* Dark mode toggle button style */
+#dark-mode-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: var(--accent-color);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 100;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#dark-mode-toggle.dark-mode {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+/* About Me and Profession Image Section Styles */
+.about-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: row;
+}
+
+.about-text {
+    flex: 1;
+    padding: 20px;
+    text-align: left;
+}
+
+.about-image {
+    flex: 1;
+    text-align: right;
+}
+
+.about-image img {
+    max-width: 150%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.profession-image {
+    text-align: center;
+}
+
+.profession-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+/* Change the color of links in the "Contact Me" section */
+#contact a {
+    color: #00f; /* Change to your desired color (e.g., blue) */
+    text-decoration: none; /* Remove underlines from links */
+}
+
+#contact a:hover {
+    color: #f00; /* Change to your desired color for hover (e.g., red) */
+}
